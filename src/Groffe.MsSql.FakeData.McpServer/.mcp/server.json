@@ -1,0 +1,28 @@
+{
+  "$schema": "https://modelcontextprotocol.io/schemas/draft/2025-07-09/server.json",
+  "description": "MCP para geracao de dados fake no padrao brasileiro em bases do SQL Server",
+  "name": "io.github.renatogroffe/dotnet9-mcp-fakedata-sqlserver",
+  "packages": [
+    {
+      "registry_name": "nuget",
+      "name": "FakeDataSqlSrvMcpServer",
+      "version": "0.0.1",
+      "package_arguments": [],
+      "environment_variables": [
+        {
+          "name": "CONNECTION_STRING",
+          "description": "Connection string para a base de dados",
+          "is_required": true,
+          "is_secret": false
+        }
+      ]
+    }
+  ],
+  "repository": {
+    "url": "https://github.com/renatogroffe/dotnet9-mcp-fakedata-sqlserver",
+    "source": "github"
+  },
+  "version_detail": {
+    "version": "0.0.1"
+  }
+}
