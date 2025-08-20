@@ -6,7 +6,7 @@
     {
       "registry_name": "nuget",
       "name": "FakeDataSqlSrvMcpServer",
-      "version": "0.0.1",
+      "version": "1.0.0",
       "package_arguments": [],
       "environment_variables": [
         {
@@ -23,6 +23,6 @@
     "source": "github"
   },
   "version_detail": {
-    "version": "0.0.1"
+    "version": "1.0.0"
   }
 }

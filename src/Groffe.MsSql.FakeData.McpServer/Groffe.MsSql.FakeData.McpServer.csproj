@@ -14,18 +14,17 @@
     <!-- Set recommended package metadata -->
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <PackageId>FakeDataSqlSrvMcpServer</PackageId>
-    <PackageVersion>0.0.1</PackageVersion>
+    <PackageVersion>1.0.0</PackageVersion>
     <PackageTags>AI; MCP; server; stdio</PackageTags>
     <Description>An MCP server using the MCP C# SDK.</Description>
 	  
-	<!-- Campos adicionais -->
-	<AssemblyName>mcpfakedatasqlserver-202508a</AssemblyName>
-	<ToolCommandName>mcpfakedatasqlserver</ToolCommandName>
-	<Authors>Renato Groffe</Authors>
-	<Company>Groffe</Company>
-	<Description>
-		MCP para geracao de dados fake no padrao brasileiro em bases do SQL Server.
-	</Description>
+    <!-- Campos adicionais -->
+    <ToolCommandName>mcpfakedatasqlserver</ToolCommandName>
+    <Authors>Renato Groffe</Authors>
+    <Company>Groffe</Company>
+    <Description>
+      MCP para geracao de dados fake no padrao brasileiro em bases do SQL Server.
+    </Description>
   </PropertyGroup>
 
   <!-- Include additional files for browsing the MCP server. -->

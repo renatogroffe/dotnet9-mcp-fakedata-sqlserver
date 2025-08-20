@@ -1,0 +1,46 @@
+name: mcp-sqlserver-fakedata-nuget
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+  workflow_dispatch:
+
+env:
+  PATH_PROJECT_FILE: ./src/Groffe.MsSql.FakeData.McpServer/Groffe.MsSql.FakeData.McpServer.csproj
+  PATH_PROJECT: ./src/Groffe.MsSql.FakeData.McpServer/
+  NUGET_SERVER: https://api.nuget.org/v3/index.json
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup .NET Core SDK
+        uses: actions/setup-dotnet@v3.4.2
+        with:
+          dotnet-version: 9.0.304
+
+      - name: Exibir conteudo do README.md gerado para o package
+        run: |
+          cd ${{ env.PATH_PROJECT }}
+          cat README.md
+          
+      - name: Exibir conteudo do arquivo .csproj
+        run: cat ${{ env.PATH_PROJECT_FILE }}
+
+      - name: Geracao do package
+        run: dotnet pack ${{ env.PATH_PROJECT_FILE }} -c Release -o out
+      
+      - name: Exibir arquivos gerados apos build
+        run: |
+          cd out
+          ls -l
+  
+      - name: Push no NuGet
+        run: |
+          cd out
+          dotnet nuget push *.nupkg --api-key ${{ secrets.NUGET_API_KEY }} --source ${{ env.NUGET_SERVER }}
