@@ -10,6 +10,8 @@ Para instalar este MCP execute a instrução a seguir em Windows, Linux ou macOS
 dotnet tool install --global FakeDataSqlSrvMcpServer --version 1.0.0
 ```
 
+Package no NuGet: https://www.nuget.org/packages/FakeDataSqlSrvMcpServer/
+
 Para saber mais sobre o template de projeto .NET para MCP acesse: https://devblogs.microsoft.com/dotnet/mcp-server-dotnet-nuget-quickstart/
 
 Este MCP pode ser utilizando em conjunto com o MCP Server do SQL Server. Criei uma versão do MCP do SQL Server que pode ser instalada como uma .NET Global Tool e que foi publicada no NuGet. Basta apenas executar a instrução a seguir em Windows, Linux ou macOS, em um ambiente que conte pelo menos com o .NET 8 previamente instalado:
@@ -24,6 +26,15 @@ O comando a seguir mostrará se as ferramentas foram corretamente instaladas:
 
 ```bash
 dotnet tool list -g
+```
+
+E trará um resultado similar a:
+
+```
+Package Id                        Version      Commands
+-------------------------------------------------------------------
+fakedatasqlsrvmcpserver           1.0.0        mcpfakedatasqlserver
+mcpsqlserver-preview-202508d      1.0.0        mcpsqlserver
 ```
 
 Exemplo de arquivo mcp.json do VS Code configurado para uso destes 2 MCPs:
