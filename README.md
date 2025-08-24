@@ -62,3 +62,11 @@ Exemplo de arquivo mcp.json do VS Code configurado para uso destes 2 MCPs:
 	"inputs": []
 }
 ```
+
+Um exemplo utilizando a tool do MCP para cadastrar Contatos fake:
+
+![Contatos fake](img/vscode-mcps-sql-fakedata-01.png)
+
+Um segundo exemplo usando a tool do MCP para cadastrar Empresas fake:
+
+![Empresas fake](img/vscode-mcps-sql-fakedata-02.png)
